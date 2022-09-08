@@ -22,9 +22,7 @@
                   <a href="#schedule-section" onclick="toggleNav()">Schedule</a>
                </li>
                <li>
-                  <a href="#ticket-section" onclick="toggleNav()"
-                     >Buy tickets</a
-                  >
+                  <a href="#tickets" onclick="toggleNav()">Buy tickets</a>
                </li>
                <li>
                   <a href="#testimonial-section" onclick="toggleNav()"
@@ -58,6 +56,7 @@
 
       <main>
          <section id="schedule-section">
+            <h2>Schedule</h2>
             <table class="schedule-table">
                <thead>
                   <tr>
@@ -93,22 +92,149 @@
                </tbody>
             </table>
             <div class="performer-images">
-               <div><img src="./mediafiles/images/artists/bilderbuch.jpg" /><pre>Bilderbuch</pre></div>
-               <div><img src="./mediafiles/images/artists/wanda2.webp" /><pre>Wanda</pre></div>
-               <div><img src="./mediafiles/images/artists/christina-sturmer3.jpg" /><pre>Christina Stürmer</pre></div>
-               <div><img src="./mediafiles/images/artists/volbeat2.jpg" /><pre>Volbeat</pre></div>
-               <div><img src="./mediafiles/images/artists/imagine-dragons2.jpg" /><pre>Imagine Dragons</pre></div>
-               <div><img src="./mediafiles/images/artists/opus.jpg" /><pre>Opus</pre></div>
+               <div>
+                  <img src="./mediafiles/images/artists/bilderbuch.jpg" />
+                  <pre>Bilderbuch</pre>
+               </div>
+               <div>
+                  <img src="./mediafiles/images/artists/wanda2.webp" />
+                  <pre>Wanda</pre>
+               </div>
+               <div>
+                  <img
+                     src="./mediafiles/images/artists/christina-sturmer3.jpg"
+                  />
+                  <pre>Christina Stürmer</pre>
+               </div>
+               <div>
+                  <img src="./mediafiles/images/artists/volbeat2.jpg" />
+                  <pre>Volbeat</pre>
+               </div>
+               <div>
+                  <img src="./mediafiles/images/artists/imagine-dragons2.jpg" />
+                  <pre>Imagine Dragons</pre>
+               </div>
+               <div>
+                  <img src="./mediafiles/images/artists/opus.jpg" />
+                  <pre>Opus</pre>
+               </div>
+            </div>
+            <h2>Purchase tickets</h2>
+
+            <button
+               type="button"
+               onclick="window.open('https://www.google.com/', '_blank')"
+               class="purchase-tickets-button"
+               id="tickets"
+            >
+               Purchase tickets
+            </button>
+         </section>
+         <section id="testimonial-section">
+            <div class="testimonials-container">
+               <p>
+                  I can’t overstate how much fun Stars in Graz was. Friends,
+                  great music, scenery, late night party. Wow! So glad to be
+                  there!<br />
+                  - Christian Baumgartner
+               </p>
+
+               <p>
+                  Time stood still at last night's concert... Thanks so much! We
+                  had a fab time! <br />
+                  - Mark Lipman
+               </p>
+
+               <p>
+                  Wow! Such a delightful fun evening last Saturday. The bands
+                  were excellent and the programme perfect! We’ll look forward
+                  to the next one. <br />
+                  - David Reaney
+               </p>
+
+               <p>
+                  It’s a great music concert with a really nice crowd! Brilliant
+                  atmosphere and lots of happy faces, well done on a great
+                  event!
+                  <br />
+                  - Leonie Handl
+               </p>
             </div>
          </section>
-         <section id="ticket-section"></section>
-         <section id="testimonial-section"></section>
-         <section id="faq-section"></section>
+         <section id="faq-section">
+            <h2>Frequently asked questions</h2>
+            <details>
+               <summary>
+                  What is Stars in Graz?
+                  <div class="summary-icon-container"></div>
+               </summary>
+               Stars in Graz is a one-day music concert where many different
+               artists perform their most popular songs. <br />
+               It takes place once a year since 2015.
+            </details>
+            <details>
+               <summary>
+                  When does Stars in Graz take place?
+                  <div class="summary-icon-container"></div>
+               </summary>
+               On 30.10.2021.<br />
+               The first act starts at 17:00.
+            </details>
+            <details>
+               <summary>
+                  What is the age minimum?
+                  <div class="summary-icon-container"></div>
+               </summary>
+               Persons under 16 years of age are not allowed to enter without
+               the accompaniment of an adult.
+            </details>
+            <details>
+               <summary>
+                  Can I pay by credit card?
+                  <div class="summary-icon-container"></div>
+               </summary>
+               Yes, credit cards can be used at all food stands.
+            </details>
+            <details>
+               <summary>
+                  What is the golden circle?
+                  <div class="summary-icon-container"></div>
+               </summary>
+               In the Golden Circle, you experience your favorite act as close
+               as possible.<br />
+               It is located directly in front of the stage.<br />
+               Show your Golden Circle ticket and you'll get to this area
+               quickly and easily thanks to a separate entrance.
+            </details>
+            <details>
+               <summary>
+                  Are there wheelchair spaces?
+                  <div class="summary-icon-container"></div>
+               </summary>
+               Of course, wheelchair spaces are available.<br />
+               However, spaces are limited. Please contact us in advance for
+               more information.
+            </details>
+            <details>
+               <summary>
+                  Can I resale my ticket if I cannot go?
+                  <div class="summary-icon-container"></div>
+               </summary>
+               The resale of the tickets is prohibited.<br />
+               For security reasons, we also strongly advise against buying the
+               tickets from anyone.<br />
+               Anyone who tries to gain access to the event with copied or
+               forged tickets will be suspected of ticket misuse and prosecuted.
+            </details>
+         </section>
       </main>
       <footer></footer>
    </body>
    <script>
       const toggleNav = () => {
+         if (window.innerWidth >= 520) {
+            return;
+         }
          const navigationList = document.querySelector('.navigation-list');
          const hamburgerIcon = document.querySelector('#hamburger');
          const body = document.querySelector('body');
