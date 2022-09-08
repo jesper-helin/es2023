@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Stars in Graz | 30.10.2021</title>
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <div class="landing-page">
+         <nav>
+            <button class="hamburger" onclick="toggleNav()">
+               <img
+                  src="./mediafiles/icons/material-design-icons/navigation/ic_menu_48px.svg"
+                  alt="hamburger"
+                  id="hamburger"
+               />
+            </button>
+            <ul class="navigation-list">
+               <li><a href="#">Schedule</a></li>
+               <li><a href="#">Buy tickets</a></li>
+               <li><a href="#">Testimonials</a></li>
+               <li><a href="#">FAQs</a></li>
+            </ul>
+         </nav>
+         <video autoplay muted loop class="landing-video">
+            <source
+               src="./mediafiles/videos/Indie Band Plays Music on Stage.mp4"
+            />
+         </video>
+         <div class="landing-text-container">
+            <h1>Stars in Graz</h1>
+            <h3>30.10.2021</h3>
+            <address>Messe Congress Graz</address>
+            <h4>
+               Full website will be available: <br />
+               25.09.2021
+            </h4>
+         </div>
+         <img
+            src="./mediafiles/icons/material-design-icons/navigation/ic_more_horiz_48px.svg"
+            alt="scroll-down"
+            class="landing-scroll-down"
+            />
+            <!-- src="./mediafiles/icons/material-design-icons/navigation/ic_expand_more_48px.svg" -->
+      </div>
+
+      <main>dasdsad<br /></main>
+      <footer></footer>
+   </body>
+   <script>
+      const toggleNav = () => {
+         const navigationList = document.querySelector('.navigation-list');
+         const hamburgerIcon = document.querySelector('#hamburger');
+         const body = document.querySelector('body');
+         if (navigationList.className === 'navigation-list') {
+            navigationList.className += ' expanded';
+            hamburgerIcon.src =
+               './mediafiles/icons/material-design-icons/navigation/ic_close_48px.svg';
+            body.style.overflow = 'hidden';
+         } else {
+            navigationList.className = 'navigation-list';
+            hamburgerIcon.src =
+               './mediafiles/icons/material-design-icons/navigation/ic_menu_48px.svg';
+            body.style.overflow = 'auto';
+         }
+      };
+   </script>
+</html>
