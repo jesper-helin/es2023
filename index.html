@@ -18,10 +18,20 @@
                />
             </button>
             <ul class="navigation-list">
-               <li><a href="#">Schedule</a></li>
-               <li><a href="#">Buy tickets</a></li>
-               <li><a href="#">Testimonials</a></li>
-               <li><a href="#">FAQs</a></li>
+               <li>
+                  <a href="#schedule-section" onclick="toggleNav()">Schedule</a>
+               </li>
+               <li>
+                  <a href="#ticket-section" onclick="toggleNav()"
+                     >Buy tickets</a
+                  >
+               </li>
+               <li>
+                  <a href="#testimonial-section" onclick="toggleNav()"
+                     >Testimonials</a
+                  >
+               </li>
+               <li><a href="#faq-section" onclick="toggleNav()">FAQs</a></li>
             </ul>
          </nav>
          <video autoplay muted loop class="landing-video">
@@ -42,11 +52,59 @@
             src="./mediafiles/icons/material-design-icons/navigation/ic_more_horiz_48px.svg"
             alt="scroll-down"
             class="landing-scroll-down"
-            />
-            <!-- src="./mediafiles/icons/material-design-icons/navigation/ic_expand_more_48px.svg" -->
+         />
+         <!-- src="./mediafiles/icons/material-design-icons/navigation/ic_expand_more_48px.svg" -->
       </div>
 
-      <main>dasdsad<br /></main>
+      <main>
+         <section id="schedule-section">
+            <table class="schedule-table">
+               <thead>
+                  <tr>
+                     <th>Time</th>
+                     <th>Performer</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>17:00</td>
+                     <td>Bilderbuch</td>
+                  </tr>
+                  <tr>
+                     <td>18:00</td>
+                     <td>Wanda</td>
+                  </tr>
+                  <tr>
+                     <td>19:00</td>
+                     <td>Christina Stürmer</td>
+                  </tr>
+                  <tr>
+                     <td>20:00</td>
+                     <td>Volbeat</td>
+                  </tr>
+                  <tr>
+                     <td>21:00</td>
+                     <td>Imagine Dragons</td>
+                  </tr>
+                  <tr>
+                     <td>22:00</td>
+                     <td>Opus</td>
+                  </tr>
+               </tbody>
+            </table>
+            <div class="performer-images">
+               <div><img src="./mediafiles/images/artists/bilderbuch.jpg" /><pre>Bilderbuch</pre></div>
+               <div><img src="./mediafiles/images/artists/wanda2.webp" /><pre>Wanda</pre></div>
+               <div><img src="./mediafiles/images/artists/christina-sturmer3.jpg" /><pre>Christina Stürmer</pre></div>
+               <div><img src="./mediafiles/images/artists/volbeat2.jpg" /><pre>Volbeat</pre></div>
+               <div><img src="./mediafiles/images/artists/imagine-dragons2.jpg" /><pre>Imagine Dragons</pre></div>
+               <div><img src="./mediafiles/images/artists/opus.jpg" /><pre>Opus</pre></div>
+            </div>
+         </section>
+         <section id="ticket-section"></section>
+         <section id="testimonial-section"></section>
+         <section id="faq-section"></section>
+      </main>
       <footer></footer>
    </body>
    <script>
