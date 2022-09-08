@@ -130,6 +130,18 @@ nav .navigation-list a:hover {
    }
 }
 
+.scroll-down-text {
+   position: absolute;
+   bottom: 40px;
+   left: 0;
+   right: 0;
+   margin-left: auto;
+   margin-right: auto;
+   font-style: italic;
+   font-size: 0.8rem;
+   width: fit-content;
+}
+
 .landing-scroll-down {
    position: absolute;
    bottom: 0;
@@ -151,17 +163,20 @@ main {
 /* Schedule */
 .schedule-table th {
    text-align: start;
+   font-size: 1.3rem;
+
 }
 
 .schedule-table td {
    padding: 0 30px 0 0;
+   font-size: 1.1rem;
 }
 
 .performer-images {
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
-   max-width: 100%;
+   max-width: 90%;
 }
 
 .performer-images > div {
@@ -224,11 +239,16 @@ main {
    width: 90%;
    border-top: solid 1px var(--primary-color);
    margin: 10px 0;
+   user-select: none;
 }
 
 #faq-section details > summary {
    font-size: 1.3rem;
    list-style: none;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   cursor: pointer;
 }
 
 .summary-icon-container {
@@ -236,17 +256,11 @@ main {
    width: 36px;
    background-image: url('./mediafiles/icons/material-design-icons/navigation/ic_expand_more_48px.svg');
    background-position: center;
-   transition: .2s ease-in-out;
+   transition: 0.2s ease-in-out;
 }
 
 details[open] .summary-icon-container {
    transform: rotate(180deg);
-}
-
-#faq-section summary {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
 }
 
 /* -------------------------------------- */
