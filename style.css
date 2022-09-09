@@ -28,6 +28,7 @@
    box-sizing: border-box;
    font-family: 'PopReg';
    color: var(--primary-color);
+   user-select: none;
 }
 
 html {
@@ -320,11 +321,23 @@ details[open] .summary-icon-container {
 
    nav .navigation-list {
       display: none;
+      animation: .1s ease alternate nav-slide;
+   }
+
+   @keyframes nav-slide {
+      from {
+         /* transform: translateX(100vw); */
+         right: -100vw;
+      }
+
+      to {
+         /* transform: translateX(0); */
+         right: 0;
+      }
    }
 
    nav .navigation-list.expanded {
       position: absolute;
-      right: 0;
       margin: 0;
       width: 100vw;
       height: 100vh;

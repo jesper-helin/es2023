@@ -7,7 +7,7 @@
       <title>Stars in Graz | 30.10.2021</title>
       <link rel="stylesheet" href="style.css" />
    </head>
-   <body>
+   <body onresize="checkOverflow()">
       <div class="landing-page">
          <nav>
             <button class="hamburger" onclick="toggleNav()">
@@ -269,6 +269,19 @@
          </section>
       </main>
       <script>
+         const checkOverflow = () => {
+            const body = document.querySelector('body');
+            const navigationList = document.querySelector('.navigation-list');
+            const hamburgerIcon = document.querySelector('#hamburger');
+
+            if (window.innerWidth >= 520) {
+               body.style.overflow = 'auto';
+               navigationList.className = 'navigation-list';
+               hamburgerIcon.src =
+                  './mediafiles/icons/material-design-icons/navigation/ic_menu_48px.svg';
+            }
+         };
+
          const toggleNav = () => {
             if (window.innerWidth >= 520) {
                return;
@@ -276,6 +289,7 @@
             const navigationList = document.querySelector('.navigation-list');
             const hamburgerIcon = document.querySelector('#hamburger');
             const body = document.querySelector('body');
+
             if (navigationList.className === 'navigation-list') {
                navigationList.className += ' expanded';
                hamburgerIcon.src =
