@@ -22,7 +22,9 @@
                   <a href="#schedule-section" onclick="toggleNav()">Schedule</a>
                </li>
                <li>
-                  <a href="#tickets" onclick="toggleNav()">Buy tickets</a>
+                  <a href="#tickets-section" onclick="toggleNav()"
+                     >Buy tickets</a
+                  >
                </li>
                <li>
                   <a href="#testimonial-section" onclick="toggleNav()"
@@ -94,25 +96,38 @@
             </table>
             <div class="performer-images">
                <div>
-                  <img alt="Bilderbuch" src="./mediafiles/images/artists/bilderbuch.jpg" />
+                  <img
+                     alt="Bilderbuch"
+                     src="./mediafiles/images/artists/bilderbuch.jpg"
+                  />
                   <pre>Bilderbuch</pre>
                </div>
                <div>
-                  <img alt="Wanda" src="./mediafiles/images/artists/wanda2.webp" />
+                  <img
+                     alt="Wanda"
+                     src="./mediafiles/images/artists/wanda2.webp"
+                  />
                   <pre>Wanda</pre>
                </div>
                <div>
-                  <img alt="Christina Sturmer"
+                  <img
+                     alt="Christina Sturmer"
                      src="./mediafiles/images/artists/christina-sturmer3.jpg"
                   />
                   <pre>Christina Stürmer</pre>
                </div>
                <div>
-                  <img alt="Volbeat" src="./mediafiles/images/artists/volbeat2.jpg" />
+                  <img
+                     alt="Volbeat"
+                     src="./mediafiles/images/artists/volbeat2.jpg"
+                  />
                   <pre>Volbeat</pre>
                </div>
                <div>
-                  <img alt="Imagine Dragons" src="./mediafiles/images/artists/imagine-dragons2.jpg" />
+                  <img
+                     alt="Imagine Dragons"
+                     src="./mediafiles/images/artists/imagine-dragons2.jpg"
+                  />
                   <pre>Imagine Dragons</pre>
                </div>
                <div>
@@ -120,15 +135,26 @@
                   <pre>Opus</pre>
                </div>
             </div>
-            <h2 id="tickets">Purchase tickets</h2>
-
-            <button
-               type="button"
-               onclick="window.open('https://www.google.com/', '_blank')"
-               class="purchase-tickets-button"
-            >
-               Purchase tickets
-            </button>
+         </section>
+         <section id="tickets-section">
+            <div class="tickets-container">
+               <h2>Purchase tickets</h2>
+               <p>
+                  Messe Congrez Graz is the largest multi-functional event hall
+                  in Graz. Even before Stars in Graz, the location featured many
+                  international bands and musicians. Be a part of it and
+                  experience the unique atmosphere during a very special
+                  evening.
+               </p>
+               <button
+                  type="button"
+                  onclick="window.open('https://www.google.com/', '_blank')"
+                  class="purchase-tickets-button"
+               >
+                  Purchase tickets
+               </button>
+            </div>
+            <div></div>
          </section>
          <section id="testimonial-section">
             <h2>Testimonials</h2>
@@ -169,87 +195,99 @@
                   What is Stars in Graz?
                   <span class="summary-icon-container"></span>
                </summary>
-               Stars in Graz is a one-day music concert where many different
-               artists perform their most popular songs. <br />
-               It takes place once a year since 2015.
+               <p>
+                  Stars in Graz is a one-day music concert where many different
+                  artists perform their most popular songs. <br />
+                  It takes place once a year since 2015.
+               </p>
             </details>
             <details>
                <summary>
                   When does Stars in Graz take place?
                   <span class="summary-icon-container"></span>
                </summary>
-               On 30.10.2021.<br />
-               The first act starts at 17:00.
+               <p>
+                  On 30.10.2021.<br />
+                  The first act starts at 17:00.
+               </p>
             </details>
             <details>
                <summary>
                   What is the age minimum?
                   <span class="summary-icon-container"></span>
                </summary>
-               Persons under 16 years of age are not allowed to enter without
-               the accompaniment of an adult.
+               <p>
+                  Persons under 16 years of age are not allowed to enter without
+                  the accompaniment of an adult.
+               </p>
             </details>
             <details>
                <summary>
                   Can I pay by credit card?
                   <span class="summary-icon-container"></span>
                </summary>
-               Yes, credit cards can be used at all food stands.
+               <p>Yes, credit cards can be used at all food stands.</p>
             </details>
             <details>
                <summary>
                   What is the golden circle?
                   <span class="summary-icon-container"></span>
                </summary>
-               In the Golden Circle, you experience your favorite act as close
-               as possible.<br />
-               It is located directly in front of the stage.<br />
-               Show your Golden Circle ticket and you'll get to this area
-               quickly and easily thanks to a separate entrance.
+               <p>
+                  In the Golden Circle, you experience your favorite act as
+                  close as possible.<br />
+                  It is located directly in front of the stage.<br />
+                  Show your Golden Circle ticket and you'll get to this area
+                  quickly and easily thanks to a separate entrance.
+               </p>
             </details>
             <details>
                <summary>
                   Are there wheelchair spaces?
                   <span class="summary-icon-container"></span>
                </summary>
-               Of course, wheelchair spaces are available.<br />
-               However, spaces are limited. Please contact us in advance for
-               more information.
+               <p>
+                  Of course, wheelchair spaces are available.<br />
+                  However, spaces are limited. Please contact us in advance for
+                  more information.
+               </p>
             </details>
             <details>
                <summary>
                   Can I resale my ticket if I cannot go?
                   <span class="summary-icon-container"></span>
                </summary>
-               The resale of the tickets is prohibited.<br />
-               For security reasons, we also strongly advise against buying the
-               tickets from anyone.<br />
-               Anyone who tries to gain access to the event with copied or
-               forged tickets will be suspected of ticket misuse and prosecuted.
+               <p>
+                  The resale of the tickets is prohibited.<br />
+                  For security reasons, we also strongly advise against buying
+                  the tickets from anyone.<br />
+                  Anyone who tries to gain access to the event with copied or
+                  forged tickets will be suspected of ticket misuse and
+                  prosecuted.
+               </p>
             </details>
          </section>
       </main>
-      <footer></footer>
-   <script>
-      const toggleNav = () => {
-         if (window.innerWidth >= 520) {
-            return;
-         }
-         const navigationList = document.querySelector('.navigation-list');
-         const hamburgerIcon = document.querySelector('#hamburger');
-         const body = document.querySelector('body');
-         if (navigationList.className === 'navigation-list') {
-            navigationList.className += ' expanded';
-            hamburgerIcon.src =
-               './mediafiles/icons/material-design-icons/navigation/ic_close_48px.svg';
-            body.style.overflow = 'hidden';
-         } else {
-            navigationList.className = 'navigation-list';
-            hamburgerIcon.src =
-               './mediafiles/icons/material-design-icons/navigation/ic_menu_48px.svg';
-            body.style.overflow = 'auto';
-         }
-      };
-   </script>
+      <script>
+         const toggleNav = () => {
+            if (window.innerWidth >= 520) {
+               return;
+            }
+            const navigationList = document.querySelector('.navigation-list');
+            const hamburgerIcon = document.querySelector('#hamburger');
+            const body = document.querySelector('body');
+            if (navigationList.className === 'navigation-list') {
+               navigationList.className += ' expanded';
+               hamburgerIcon.src =
+                  './mediafiles/icons/material-design-icons/navigation/ic_close_48px.svg';
+               body.style.overflow = 'hidden';
+            } else {
+               navigationList.className = 'navigation-list';
+               hamburgerIcon.src =
+                  './mediafiles/icons/material-design-icons/navigation/ic_menu_48px.svg';
+               body.style.overflow = 'auto';
+            }
+         };
+      </script>
    </body>
 </html>

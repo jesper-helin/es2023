@@ -19,8 +19,7 @@
 :root {
    font-size: 18px;
    --primary-color: #f1f2f6;
-   --secondary-color: #120a33;
-   --tertiary-color: #101010;
+   --secondary-color: #101010;
 }
 
 * {
@@ -44,6 +43,7 @@ section {
 }
 
 section h2 {
+   font-family: 'PopBold';
    text-align: center;
    letter-spacing: 3px;
    padding-bottom: 10px;
@@ -121,7 +121,8 @@ nav .navigation-list a:hover {
 .landing-text-container h4 {
    font-family: 'PopLight';
    text-align: center;
-   padding-top: 150px;
+   position: absolute;
+   bottom: 160px;
 }
 
 @keyframes bubble {
@@ -160,7 +161,7 @@ nav .navigation-list a:hover {
 /* Main */
 main {
    padding-top: 50px;
-   background-color: var(--tertiary-color);
+   background-color: var(--secondary-color);
 }
 
 /* -------------------------------------- */
@@ -168,7 +169,6 @@ main {
 .schedule-table th {
    text-align: start;
    font-size: 1.3rem;
-
 }
 
 .schedule-table td {
@@ -198,10 +198,34 @@ main {
    max-height: 100%;
 }
 
+/* -------------------------------------- */
+/* Tickets section */
+
+#tickets-section {
+   height: 100vh;
+   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('./mediafiles/images/concert/filip-andrejevic-QmX5lw8StoQ-unsplash.jpg');
+   background-size: cover;
+   background-position: center;
+}
+
+.tickets-container {
+   width: clamp(30%, 90%, 500px);
+}
+
+.tickets-container h2 {
+   text-align: left;
+}
+
+.tickets-container p {
+   text-align: justify;
+   letter-spacing: -0.8px;
+}
+
 .purchase-tickets-button {
    color: var(--secondary-color);
    font-size: 1.3rem;
-   margin: 25px 0;
+   margin: 50px 0 0 0;
    padding: 15px;
    border: var(--primary-color) 0.5px solid;
    border-radius: 5px;
@@ -210,9 +234,9 @@ main {
 }
 
 .purchase-tickets-button:hover {
-   background-color: transparent;
+   background-color: rgba(0, 0, 0, 0.8);
    color: var(--primary-color);
-   border: var(--primary-color) 0.5px solid;
+   border: var(--secondary-color) 0.5px solid;
 }
 
 /* -------------------------------------- */
@@ -236,12 +260,16 @@ main {
    margin: 15px;
    flex: 1 1 30%;
    font-style: italic;
+   letter-spacing: -0.3px;
 }
 
 /* -------------------------------------- */
 /* Navigation media */
-#faq-section details {
+#faq-section > * {
    width: 90%;
+}
+
+#faq-section details {
    border-top: solid 1px var(--primary-color);
    margin: 10px 0;
    user-select: none;
@@ -254,6 +282,10 @@ main {
    flex-direction: row;
    justify-content: space-between;
    cursor: pointer;
+}
+
+#faq-section p {
+   font-family: 'PopLight';
 }
 
 .summary-icon-container {
@@ -276,6 +308,7 @@ details[open] .summary-icon-container {
    nav {
       background: none;
    }
+
    nav .hamburger {
       position: absolute;
       z-index: 1000;
