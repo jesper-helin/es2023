@@ -196,7 +196,7 @@ main {
 
 .performer-images img {
    width: 100%;
-   max-height: 100%;
+   min-height: 90%;
 }
 
 /* -------------------------------------- */
