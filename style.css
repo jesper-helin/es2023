@@ -320,23 +320,9 @@ details[open] .summary-icon-container {
    }
 
    nav .navigation-list {
-      display: none;
-      animation: .1s ease alternate nav-slide;
-   }
-
-   @keyframes nav-slide {
-      from {
-         /* transform: translateX(100vw); */
-         right: -100vw;
-      }
-
-      to {
-         /* transform: translateX(0); */
-         right: 0;
-      }
-   }
-
-   nav .navigation-list.expanded {
+      visibility: hidden;
+      opacity: 0;
+      transition: all 400ms 0ms ease-in-out;
       position: absolute;
       margin: 0;
       width: 100vw;
@@ -348,8 +334,13 @@ details[open] .summary-icon-container {
       font-size: 2rem;
       background-color: rgba(10, 10, 10, 1);
    }
+   
+   nav .navigation-list.expanded {
+      visibility: visible;
+      opacity: 1;
+   }
 
-   nav .navigation-list.expanded li {
+   nav .navigation-list li {
       position: relative;
       top: 100px;
       padding: 10px 40px;
